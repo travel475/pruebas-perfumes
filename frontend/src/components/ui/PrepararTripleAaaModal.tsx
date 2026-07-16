@@ -199,7 +199,7 @@ export function PrepararTripleAaaModal({ isOpen, onClose, onAdd }: Props) {
             </Button>
           </div>
           
-          <div className="space-y-2 max-h-[30vh] overflow-y-auto pr-2">
+          <div className="space-y-2 pb-16">
             {ingredientes.map((ing, idx) => (
               <div key={ing.id} className="flex gap-2 items-center bg-zinc-50 p-2 rounded-lg border border-zinc-100 shadow-sm">
                 <span className="text-xs font-bold text-zinc-400 w-4 text-center">{idx + 1}.</span>
