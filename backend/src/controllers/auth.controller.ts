@@ -21,12 +21,12 @@ export const createUser = async (req: Request, res: Response) => {
     const userId = authData.user.id;
     const { error: profileError } = await supabase
       .from('profiles')
-      .update({
+      .upsert({
+        id: userId,
         email,
         nombre,
         rol,
-      })
-      .eq('id', userId);
+      });
 
     if (profileError) {
       console.error('Error creando perfil:', profileError);
